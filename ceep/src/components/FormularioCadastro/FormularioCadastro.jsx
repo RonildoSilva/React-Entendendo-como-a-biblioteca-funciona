@@ -29,7 +29,7 @@ class FormularioCadastro extends Component {
         return(            
             <div className="row">
             <form
-            onSubmit={this.criarNota.bind(this)}
+            onSubmit={this._criarNota.bind(this)}
             >
                 <div className="form-group">
                     <input type="text" placeholder="Titulo"
