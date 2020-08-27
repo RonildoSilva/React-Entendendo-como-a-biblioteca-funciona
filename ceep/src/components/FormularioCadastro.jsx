@@ -8,7 +8,7 @@ class FormularioCadastro extends Component {
             <form>
                 <input type="text" placeholder="Titulo"/>
                 <textarea placeholder="Nota"></textarea>
-                <button>Criar nota</button>
+                <button className="btn btn-primary">Criar nota</button>
             </form>
         );
     }
