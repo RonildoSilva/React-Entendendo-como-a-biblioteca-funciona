@@ -4,12 +4,16 @@ import FormularioCadastro from './components/FormularioCadastro/FormularioCadast
 
 class App extends Component {
   
+  criarNota(titulo, texto){
+
+  }
+
   render(){
     
     return (
       <section>
         
-        <FormularioCadastro />
+        <FormularioCadastro criarNota={this.criarNota}/>
         <ListaDeNotas />
 
       </section>

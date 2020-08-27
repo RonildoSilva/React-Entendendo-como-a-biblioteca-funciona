@@ -3,27 +3,44 @@ import { Component } from 'react';
 
 class FormularioCadastro extends Component {
 
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
         this.titulo = '';
+        this.texto = '';
     }
 
-    handleMudancaTitulo(evento){
+    _handleMudancaTitulo(evento){
+        evento.stopPropagation();
         this.titulo = evento.target.value;
+    }
+
+    _handleMudancaTexto(evento){
+        evento.stopPropagation();
+        this.texto = evento.target.value;
+    }
+
+    _criarNota(evento){
+        evento.preventDefault();
+        evento.stopPropagation();
+        this.props.criarNota(this.titulo, this.texto);
     }
 
     render(){
         return(            
             <div className="row">
-            <form>
+            <form
+            onSubmit={this.criarNota.bind(this)}
+            >
                 <div className="form-group">
                     <input type="text" placeholder="Titulo"
-                    onChange={this.handleMudancaTitulo.bind(this)}
+                    onChange={this._handleMudancaTitulo.bind(this)}
                     />
                 </div>
                 <div className="form-group">
                     <textarea className="form-control" placeholder="Nota" 
-                    rows={3}></textarea>
+                    rows={3}
+                    onChange={this._handleMudancaTexto.bind(this)}
+                    />
                 </div>                    
                 <div className="form-group">
                     <button className="btn btn-primary">Criar nota</button>
