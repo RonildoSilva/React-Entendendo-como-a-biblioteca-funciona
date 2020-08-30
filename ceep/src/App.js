@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ListaDeCategorias from './components/ListaDeCategorias/ListaDeCategorias'
 import ListaDeNotas from './components/ListaDeNotas/ListaDeNotas'
 import FormularioCadastro from './components/FormularioCadastro/FormularioCadastro'
 
@@ -34,9 +35,13 @@ class App extends Component {
         <div class="row">
         
         <FormularioCadastro criarNota={this.criarNota.bind(this)}/>
-        <ListaDeNotas 
+        <div class="col-sm-8">
+          <ListaDeCategorias />
+
+          <ListaDeNotas 
           apagarNota={this.deletarNota.bind(this)}
           notas={this.state.notas}/>
+        </div>       
 
         </div>
       </div>

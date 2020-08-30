@@ -5,7 +5,7 @@ class ListaDeNotas extends Component {
 
     render(){
         return(
-            <div class="col-sm-8 border-left">
+            <div class="col-sm-12 border-left">
                 
                 {this.props.notas.map((nota, index) =>{
                     return (
