@@ -6,10 +6,16 @@ class ListaDeNotas extends Component {
     render(){
         return(
             <div class="col-sm-8 border-left">
+                
                 {this.props.notas.map((nota, index) =>{
                     return (
                         <span key={index}>
-                            <CardNota titulo={nota.titulo} texto={nota.texto}/>
+                            <CardNota
+                                indice = {index}
+                                apagarNota={this.props.apagarNota}
+                                titulo={nota.titulo}
+                                texto={nota.texto}
+                            />
                         </span>
                     );
                 })}
