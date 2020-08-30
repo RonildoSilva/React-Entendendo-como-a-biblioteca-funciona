@@ -23,12 +23,14 @@ class App extends Component {
   render(){
     
     return (
-      <section>
+      <div class="container">
+        <div class="row">
         
         <FormularioCadastro criarNota={this.criarNota.bind(this)}/>
         <ListaDeNotas notas={this.state.notas}/>
 
-      </section>
+        </div>
+      </div>
     );
   }
 }

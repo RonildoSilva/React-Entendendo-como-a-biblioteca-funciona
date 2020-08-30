@@ -27,7 +27,7 @@ class FormularioCadastro extends Component {
 
     render(){
         return(            
-            <div className="row">
+            <div class="col-sm-4">
             <form
             onSubmit={this._criarNota.bind(this)}
             >
