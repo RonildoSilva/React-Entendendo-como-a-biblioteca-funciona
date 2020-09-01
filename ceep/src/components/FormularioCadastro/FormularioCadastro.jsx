@@ -28,9 +28,15 @@ class FormularioCadastro extends Component {
     render(){
         return(            
             <div class="col-sm-4">
-            <form
-            onSubmit={this._criarNota.bind(this)}
-            >
+            <form onSubmit={this._criarNota.bind(this)} >
+                <div className="form-group">
+                    <select>
+                        {this.props.categorias.map(categoria =>{
+                            return <option>{categoria}</option>
+                        })}
+                    </select>
+                </div>
+
                 <div className="form-group">
                     <input type="text" placeholder="Titulo"
                     onChange={this._handleMudancaTitulo.bind(this)}

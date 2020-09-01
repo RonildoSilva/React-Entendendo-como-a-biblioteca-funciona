@@ -42,7 +42,10 @@ class App extends Component {
       <div class="container">
         <div class="row">
         
-        <FormularioCadastro criarNota={this.criarNota.bind(this)}/>
+        <FormularioCadastro 
+          categorias={this.state.categorias}
+          criarNota={this.criarNota.bind(this)}
+        />
         <div class="col-sm-8">
           <ListaDeCategorias 
             adicionarCategoria={this.adicionarCategoria.bind(this)}
