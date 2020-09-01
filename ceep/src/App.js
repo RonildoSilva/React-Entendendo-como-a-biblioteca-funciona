@@ -24,6 +24,7 @@ class App extends Component {
           categorias={this.categorias.categorias}
           criarNota={this.notas.criarNota}
         />
+        
         <div class="col-sm-8">
           <ListaDeCategorias 
             adicionarCategoria={this.categorias.adicionarCategoria}
