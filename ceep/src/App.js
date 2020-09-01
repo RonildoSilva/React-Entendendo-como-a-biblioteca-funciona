@@ -21,8 +21,8 @@ class App extends Component {
         <div class="row">
         
         <FormularioCadastro 
-          categorias={this.categorias.categorias}
-          criarNota={this.notas.criarNota}
+          categorias={this.categorias}
+          criarNota={this.notas.adicionarNota.bind(this.notas)}
         />
 
         <div class="col-sm-8">
@@ -32,8 +32,8 @@ class App extends Component {
           />
 
           <ListaDeNotas 
-            apagarNota={this.notas.apagarNota}
-            notas={this.notas.notas}
+            apagarNota={this.notas.apagarNota.bind(this.notas)}
+            notas={this.notas}
           />
         </div>       
 

@@ -5,14 +5,14 @@ export default class Categorias {
         this._inscritos = [];
     }
 
-    inscrever(func){
-        this._inscritos.push(func);
-    }
-
     notificar(){
         this._inscritos.forEach(func => {
             func(this.categorias);
         });
+    }
+
+    inscrever(func){
+        this._inscritos.push(func);
     }
 
     adicionarCategoria(novaCategoria){
