@@ -2,6 +2,13 @@ import React, {Component} from 'react';
 
 class ListaDeCategorias extends Component{
  
+    componentDidMount(){
+        this.props.categorias.inscrever(this._novasCategorias.bind(this));
+    }
+
+    _novasCategorias(categorias){
+        console.log(categorias);
+    }
     _handlerEventoInput(event){
         if(event.key == "Enter"){
             console.log('add')
@@ -15,7 +22,7 @@ class ListaDeCategorias extends Component{
             <div class="nav navbar-nav navbar-right">
                 <ul class="nav navbar-nav float-left">
                     {
-                    this.props.categorias.map((categoria, index)=>{
+                    this.props.categorias.categorias.map((categoria, index)=>{
                         return <li key={index}>{categoria}</li>;
                     })}
                 </ul>

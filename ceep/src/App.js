@@ -24,11 +24,11 @@ class App extends Component {
           categorias={this.categorias.categorias}
           criarNota={this.notas.criarNota}
         />
-        
+
         <div class="col-sm-8">
           <ListaDeCategorias 
-            adicionarCategoria={this.categorias.adicionarCategoria}
-            categorias={this.categorias.categorias}
+            adicionarCategoria={this.categorias.adicionarCategoria.bind(this.categorias)}
+            categorias={this.categorias}
           />
 
           <ListaDeNotas 
